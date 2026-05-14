@@ -1,42 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For You ❤️</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#121212;
+    font-family:Arial;
+    color:white;
+}
+
+.card{
+    background:#1e1e1e;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    width:320px;
+}
+
+img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#1DB954;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+audio{
+    margin-top:20px;
+    width:100%;
+}
+
+</style>
+
 </head>
 <body>
 
-  <div class="card">
+<div class="card">
 
-    <img src="album1.jpg" class="album">
+<img src="album1.jpg">
 
-    <h1>Our Song 🎵</h1>
+<h1>Our Song 🎵</h1>
 
-    <p>
-      Every moment with you feels like music.
-    </p>
+<p>Even silence feels beautiful with you ❤️</p>
 
-<audio controls>
-  <source src="song1.mp3" type="audio/mpeg">
+<audio id="music" controls>
+    <source src="song1.mp3" type="audio/mpeg">
 </audio>
 
-    <button onclick="showMessage()">
-      Click Me ❤️
-    </button>
+<button onclick="playMusic()">
+Play Song ❤️
+</button>
 
-    <div id="message"></div>
-
-  </div>
+</div>
 
 <script>
 
-function showMessage() {
-
-  document.getElementById("message").innerHTML =
-  "You make my life feel softer, happier, and beautiful ❤️";
-
+function playMusic() {
+    document.getElementById("music").play();
 }
 
 </script>
