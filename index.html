@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Spotify</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You ❤️</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<h1>My Playlist 🎧</h1>
+  <div class="card">
 
-<div class="card">
-  <img src="images/album1.jpg">
-  <p>Song 1</p>
-  <audio controls>
-    <source src="songs/song1.mp3" type="audio/mpeg">
-  </audio>
-</div>
+    <img src="album1.jpg" class="album">
+
+    <h1>Our Song 🎵</h1>
+
+    <p>
+      Every moment with you feels like music.
+    </p>
+
+    <audio controls autoplay loop>
+      <source src="song1.mp3" type="audio/mp3">
+    </audio>
+
+    <button onclick="showMessage()">
+      Click Me ❤️
+    </button>
+
+    <div id="message"></div>
+
+  </div>
+
+<script>
+
+function showMessage() {
+
+  document.getElementById("message").innerHTML =
+  "You make my life feel softer, happier, and beautiful ❤️";
+
+}
+
+</script>
 
 </body>
 </html>
